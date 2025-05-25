@@ -7,6 +7,7 @@ dependencies = [
     "adbutils>=2.8.10",
     "numpy>=2.2.6",
     "opencv-python-headless>=4.11.0.86",
+    "pytesseract>=0.3.13",
     "typer>=0.15.4",
 ]
 
@@ -16,3 +17,10 @@ dev = [
     "ruff>=0.11.11",
     "ty>=0.0.1a6",
 ]
+
+[build-system]
+requires = ["uv_build>=0.7.8,<0.8.0"]
+build-backend = "uv_build"
+
+[project.scripts]
+pkmnpkt = "pkmnpkt:app"
